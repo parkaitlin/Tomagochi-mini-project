@@ -1,0 +1,31 @@
+/* Style the page. */
+#4979b
+#00755e
+#c6e2ff
+#063852
+#f0810f
+#efdab1
+
+#wrapper {
+    background-color: #efdab1;
+}
+
+#stats {
+    background-color: #063852; 
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+
+}
+
+h4 {
+    padding: 0 20px;
+    color: #c6e2ff;
+}
+#age {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}

@@ -5,23 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">    
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="apps.js" defer></script>
+    <script src="toma.js" defer></script>
+
 </head>
 <body>
+    <h1>Tomagochi Project</h1>
+    <form>
+            <input type="text" placeholder="Name your Tomagochi" id="toma-name">
+            <button type="submit" id="start">Start</button>
+    </form>
+    <div id="parent">
 <!-- Display the following metrics for your pet: 
         Hunger (1-10 scale)
         Sleepiness (1-10 scale)
         Boredom (1-10 scale)
         Age   -->
-        <h2>age:</h2>
-        <div id='stats'>
+        <div id="first">
             <h4>hunger:</h4>
             <h4>sleepiness:</h4>
             <h4>boredom:</h4>
         </div>
+        <div id="second">
+            <h2>(tomagochi name)</h2>
+            <img src="https://www.pinclipart.com/picdir/big/330-3308444_ryan-bear-kakaofriends-kakao-cute-kawaii-bts-kakao.png" height="150">
+            <div id="buttons">
+                    <button type="submit" id="feed">feed</button>
+                    <button type="submit" id="sleep">turn lights off</button>
+                    <button type="submit" id="play">play</button>
+            </div>
+        </div>
 <!-- Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. -->
+        <div id="third">
+            <div id="age">
+                <h3>age:</h3>
+            </div>
+            <div id='comment-box'>
+                <p id='hello'>hello~</p>
+                <p id='comment'></p>
+            </div>
+        </div>        
+
+    </div>
+
+
 
 </body>
 </html>

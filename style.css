@@ -1,26 +1,98 @@
 /* Style the page. */
-#4979b
+/* Display a character of your choice on the screen to represent your pet */
+
+/* #4979b
 #00755e
 #c6e2ff
 #063852
 #f0810f
-#efdab1
-
+#efdab1 */
 body {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    font-family: 'Baloo Chettan', cursive;
 }
 
-#stats {
-    background-color: #063852; 
-    width: 150px;
+#parent {
+    visibility: hidden;
+    width: 700px;
+    height: 350px;
+    border: 2px solid #063852;
+    margin: 30px auto;
+    padding: 35px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #efdab1; 
+}
+
+h1 {
+    color: #063852;
+    text-align: center;
+    margin: 0 auto;
+}
+
+form {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#toma-name {
+    font-family: inherit;
+    font-size: 85%;
+    background-color: #c6e2ff;
+    color: #063852;
+    border-radius: 10px;
+}
+
+#start {
+    font-family: inherit;
+    font-size: 85%;
+    background-color: #063852;
+    color: #c6e2ff;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #063852;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 h4 {
-    padding: 0 20px;
-    color: #c6e2ff;
+    margin: 10px 0;
 }
+
+#buttons {
+    
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* #second {
+
+} */
+
+#third {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;     
+    justify-content: space-between;
+}
+
+#comment-box {
+    width: 150px;
+    height: 125px;
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+p {
+    font-size: 15px;
+
+}
+
 

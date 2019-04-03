@@ -29,14 +29,14 @@ class TomagotchiPet {
             if(this.hunger > 6){
                 $('img').attr('src', 'https://i.pinimg.com/originals/02/e6/bb/02e6bbceb1637bdd8dcfeffe294a5bd0.gif')
             }
-            if(this.hunger === 10){
+            if(this.hunger === 11){
                 clearInterval(this.hungerInterval);
             }   
         }, 9000);
 
     }
     eat(){
-        if(this.hunger < 4){
+        if(this.hunger < 5){
             $('#comment').text(`${this.name} says: i'm not Hungry...`)
         } else {
             $('img').attr('src', 'https://pro2-bar-s3-cdn-cf.myportfolio.com/a11b5ee8c6486635374ca2d1ca922d33/8f2faca5-5624-4c6d-aabe-2582ffef3e1e_rw_600.gif?h=809e082e641110103e865cbc7af7403c')
@@ -55,13 +55,13 @@ class TomagotchiPet {
             if(this.boredom > 6){
                 $('img').attr('src', "https://media.tenor.com/images/83469e2610ad80929f1a90affbca2843/tenor.gif");
             }
-            if(this.boredom === 10){
+            if(this.boredom === 11){
                 clearInterval(this.boredInterval);
             }   
-        }, 2000);
+        }, 5000);
     }
     play(){
-        if(this.boredom < 4){
+        if(this.boredom < 5){
             $('#comment').text(`${this.name} says: no, i don't want to.`)
         } else {
             $('img').attr('src', 'https://thumbs.gfycat.com/FatalWeepyAtlanticblackgoby-small.gif')
@@ -77,7 +77,7 @@ class TomagotchiPet {
             this.sleepiness += 1;
             $('h4').eq(2).text(`sleepiness: ${this.sleepiness}`);
             $('h4').eq(2).css('animation', 'pulseRed 3s ease-in');
-            if(this.sleepiness === 10){
+            if(this.sleepiness === 11){
                 clearInterval(this.sleepInterval);
             }   
         }, 12000);
@@ -139,15 +139,18 @@ class TomagotchiPet {
         //alert user by inputing a message in the body
         this.diedInterval = setInterval(()=>{
             if(this.hunger === 9 || this.boredom === 9 || this.sleepiness === 9){
-                $('.visible').css('animation', 'pulseRed 3s ease-in');
-            }
-            if(this.hunger === 10 || this.boredom === 10 || this.sleepiness === 10){
+                $('.visible').css('animation', 'backgroundRed 3s ease-in');
+                $('.visible').css('background-color', '#ff4949');
+            } else if(this.hunger === 10 || this.boredom === 10 || this.sleepiness === 10){
+                $('.visible').css('animation', 'whiteout 5s ease-in');
+            } else if(this.hunger === 11 || this.boredom === 11 || this.sleepiness === 11){
                 console.log('tomagochi died')
                 clearInterval(this.hungerInterval);
                 clearInterval(this.boredInterval);
                 clearInterval(this.sleepInterval);
                 clearInterval(this.ageInterval);
                 $('.ripStart').attr('class', "rip")
+                $('.rip').css('animation', 'fadein 3s ease-out')
                 $('.visible').css('visibility', 'hidden')
                 $('h1').css('visibility', 'hidden')
                 $('#feed').css('visibility', 'hidden');

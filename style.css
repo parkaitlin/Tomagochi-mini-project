@@ -98,7 +98,6 @@ form {
     background-color: rgb(151,189,225);
 }
 .rip {
-    animation: fadeOut 4s ease-in;
     width: 700px;
     height: 350px;
     border: 2px solid #063852;
@@ -111,7 +110,7 @@ form {
 }
 #age {
     color: #063852;
-    font-size: 30px;
+    font-size: px;
 }
 
 h4 {
@@ -165,6 +164,21 @@ h4 {
     }
 }
 
+@keyframes backgroundRed{
+    0% { 
+        background-color: #ff4949;
+        opacity: 0.3;
+    }
+    50% { 
+        background-color: #ff4949;
+        opacity: 0.5;
+    }
+    100% {
+        background-color: #ff4949;
+        opacity: 0.8;
+    }
+}
+
 @keyframes pulseBigToSmall {
     0% { 
         font-size: 35px;
@@ -180,18 +194,40 @@ h4 {
     }
 }
 
-@keyframes fadeOut {
+@keyframes whiteout {
     0% { 
-        color: black;
+        
         opacity: 1;
     }
+    25% {
+        opacity: 0.8;
+    }
     50% { 
-        color: black;
         opacity: 0.5;
     }
+    75%{
+        opacity: 0.3;
+    }
     100% {
-        color: rgb(151,189,225);
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% { 
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    75%{
         opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -244,6 +280,6 @@ p {
 .try-again {
     margin: 7px;
     padding: 7px 10px;
-    font-size: 25px;
+    font-size: 30px;
     color: #063852;
 }

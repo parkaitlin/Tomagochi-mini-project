@@ -13,12 +13,13 @@
 
 </head>
 <body>
-    <h1>Tomagochi Project</h1>
+    <h1>Tomagochi Project</h1>    
+    <div class='ripStart'></div>
     <form>
-            <input type="text" placeholder="Name your Tomagochi" id="toma-name">
-            <button type="submit" id="start">Start</button>
+        <input type="text" placeholder="Name your Tomagochi" id="toma-name">
+        <button type="submit" id="start">Start</button>
     </form>
-    <div id="parent">
+    <div class="parent">
 <!-- Display the following metrics for your pet: 
         Hunger (1-10 scale)
         Sleepiness (1-10 scale)
@@ -26,12 +27,12 @@
         Age   -->
         <div id="first">
             <h4>hunger:</h4>
-            <h4>sleepiness:</h4>
             <h4>boredom:</h4>
+            <h4>sleepiness:</h4>
         </div>
         <div id="second">
-            <h2>(tomagochi name)</h2>
-            <img src="https://www.pinclipart.com/picdir/big/330-3308444_ryan-bear-kakaofriends-kakao-cute-kawaii-bts-kakao.png" height="150">
+            <h2 class='name'>(tomagochi name)</h2>
+            <img src="https://img.kpopmap.com/2017/09/hoodie-ryan.gif" width="125" height="auto">
             <div id="buttons">
                     <button type="submit" id="feed">feed</button>
                     <button type="submit" id="sleep">turn lights off</button>
@@ -41,17 +42,14 @@
 <!-- Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. -->
         <div id="third">
             <div id="age">
-                <h3>age:</h3>
+                <h3>age: 1</h3>
             </div>
             <div id='comment-box'>
                 <p id='hello'>hello~</p>
                 <p id='comment'></p>
             </div>
         </div>        
-
     </div>
-
-
 
 </body>
 </html>

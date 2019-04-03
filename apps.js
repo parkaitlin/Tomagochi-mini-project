@@ -9,6 +9,8 @@ const initiateSetup = ()=>{
     setup.tomagochi.getHungry();
     setup.tomagochi.getBored();
     setup.tomagochi.getSleepy();
+    setup.tomagochi.getOlder();
+    setup.tomagochi.checkIfAlive();
 }
 
 const setup = {
@@ -24,13 +26,14 @@ $('form').on('submit', (e)=>{
 
     $('h2').text(`Hi my name is ${valueOfInput}!`);
     $('form').css('visibility', 'hidden');
-    $('#parent').css('visibility', 'visible');
+    // $('#parent').css('visibility', 'visible');
+    $('.parent').attr('class', 'visible');
 
     initiateSetup();
     $('h4').eq(0).text(`hunger: ${setup.tomagochi.hunger}`);
     $('h4').eq(1).text(`boredom: ${setup.tomagochi.boredom}`);
     $('h4').eq(2).text(`sleepiness: ${setup.tomagochi.sleepiness}`);
-    $('h3').text(`age: ${setup.tomagochi.age}`);
+    $('#age').text(`age: ${setup.tomagochi.age}`);
 
     $('#toma-name').val("");
 })

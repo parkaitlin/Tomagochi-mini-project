@@ -11,8 +11,9 @@ body {
     font-family: 'Baloo Chettan', cursive;
 }
 
-#parent {
+.parent {
     visibility: hidden;
+    opacity:0;
     width: 700px;
     height: 350px;
     border: 2px solid #063852;
@@ -24,15 +25,43 @@ body {
     background-color: #efdab1; 
 }
 
+.visible{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+    width: 700px;
+    height: 350px;
+    border: 2px solid #063852;
+    margin: 30px auto;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #efdab1; 
+}
+
+.overlay{
+    width: 700px;
+    height: 350px;
+    transition: opacity 2s linear;
+    border: 2px solid #063852;
+    margin: 30px auto;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.5);
+}
+
 h1 {
     color: #063852;
     text-align: center;
-    margin: 0 auto;
+    margin: 100px auto 10px auto;
 }
 
 form {
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 #toma-name {
@@ -51,30 +80,147 @@ form {
     border-radius: 10px;
 }
 
-h2 {
+.name {
     color: #063852;
     display: flex;
     justify-content: flex-end;
 
 }
 
+.ripStart {
+    width: 700px;
+    height: 350px;
+    border: 2px solid #063852;
+    margin: 30px auto;
+    padding: 35px;
+    display: none;
+    text-align: center;
+    background-color: rgb(151,189,225);
+}
+.rip {
+    animation: fadeOut 4s ease-in;
+    width: 700px;
+    height: 350px;
+    border: 2px solid #063852;
+    margin: 30px auto;
+    padding: 35px;
+    display: block;
+    text-align: center;
+    background-color: rgb(151,189,225);
+}
+}
+#age {
+    color: #063852;
+    font-size: 30px;
+}
+
 h4 {
     margin: 10px 0;
 }
 
-#buttons {
-    
+@keyframes pulseGreen {
+    0% { 
+        color: #00ff00;
+        opacity: 1;
+    }
+    25% { 
+        color: #00ff00;
+        opacity: 0.5;
+    }
+    50% {
+        color: #00ff00;
+        opacity: 1;
+    }
+    75% { 
+        color: #00ff00;
+        opacity: 0.4;
+    }
+    100% {
+        color: #efdab1;
+        opacity: 0.5
+    }
+}
+
+
+@keyframes pulseRed {
+    0% { 
+        color: #ff4949;
+        opacity: 1;
+    }
+    25% { 
+        color: #ff4949;
+        opacity: 0.5;
+    }
+    50% {
+        color: #ff4949;
+        opacity: 1;
+    }
+    75% { 
+        color: #ff4949;
+        opacity: 0.4;
+    }
+    100% {
+        color: #efdab1;
+        opacity: 0.5
+    }
+}
+
+@keyframes pulseBigToSmall {
+    0% { 
+        font-size: 35px;
+        color: #063852;
+    }
+    50% { 
+        font-size: 40px;
+        color: #bcd7ff;
+    }
+    100% {
+        font-size: 35px;
+        color: #063852;
+    }
+}
+
+@keyframes fadeOut {
+    0% { 
+        color: black;
+        opacity: 1;
+    }
+    50% { 
+        color: black;
+        opacity: 0.5;
+    }
+    100% {
+        color: rgb(151,189,225);
+        opacity: 0.8;
+    }
+}
+
+button {
+    margin: 7px;
+    padding: 7px 10px;
+    color: #063852;
+    background-color: #bcd7ff;
+    border: 3px solid blanchedalmond;
+    font-family: inherit;
 }
 
 #first {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 110px;
+    height: 200px;
+    padding: 75px 10px;
+    color: blanchedalmond;
+    background-color: #063852;
 }
 
-/* #second {
-
-} */
+#second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #third {
     display: flex;
@@ -92,7 +238,12 @@ h4 {
 
 p {
     font-size: 15px;
-
+    color: #063852;
 }
 
-
+.try-again {
+    margin: 7px;
+    padding: 7px 10px;
+    font-size: 25px;
+    color: #063852;
+}
